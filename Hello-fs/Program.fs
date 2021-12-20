@@ -43,8 +43,8 @@ and Odd x =
   elif x = 0 then false
   else Even (x - 1)
 
-printfn "2301 is even: %b" (Even 2301)
-printfn "2301 is odd: %b" (Odd 2301)
+printfn "2301 is even? %b" (Even 2301)
+printfn "2301 is odd? %b" (Odd 2301)
 
 let fibEven = fib >> Even
 let fibOdd = fib >> Odd
@@ -58,3 +58,31 @@ let checkFib n =
 
 for num in 0 .. 20 do
   checkFib num
+
+type Cat() =
+  member this.Walk() = printfn "Cat walks."
+
+type Dog() =
+  member this.Walk() = printfn "Dog walks."
+
+let adapterExample() =
+  let cat = Cat()
+  let dog = Dog()
+
+  let inline walk(x: ^T) = (^T: (member Walk : unit->unit) x)
+
+  walk(cat)
+  walk(dog)
+
+adapterExample()
+
+let incrementer(n: int ref) = do
+
+  n := n.Value + 1
+
+  printfn "n is %d" n.Value
+
+
+let n = ref 0
+for step in 0 .. 20 do
+  incrementer n

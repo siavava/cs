@@ -78,7 +78,7 @@ adapterExample()
 
 let incrementer(n: int ref) = do
 
-  n := n.Value + 1
+  n.Value <- n.Value + 1
 
   printfn "n is %d" n.Value
 

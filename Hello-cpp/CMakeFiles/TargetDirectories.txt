@@ -1,0 +1,3 @@
+/mnt/c/Users/amitt/source/repos/cs/Hello-cpp/CMakeFiles/Hello-cpp.dir
+/mnt/c/Users/amitt/source/repos/cs/Hello-cpp/CMakeFiles/edit_cache.dir
+/mnt/c/Users/amitt/source/repos/cs/Hello-cpp/CMakeFiles/rebuild_cache.dir

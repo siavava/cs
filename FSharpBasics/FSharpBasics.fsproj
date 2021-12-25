@@ -9,6 +9,7 @@
     <None Include="01.fsx" />
     <Compile Include="02.fs" />
     <Compile Include="03.fs" />
+    <Compile Include="04.fsx" />
   </ItemGroup>
 
 </Project>

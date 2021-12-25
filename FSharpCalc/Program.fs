@@ -205,21 +205,6 @@ type MainWindow() =
         e.Graphics.SmoothingMode <- SmoothingMode.HighQuality
         e.Graphics.CompositingQuality <- CompositingQuality.HighQuality
 
-(*        let font = new Font("Arial", 10.0f)
-        let clrText = new SolidBrush(Color.Black)*)
-
-        // e.Graphics.DrawString("Button Color is \r\nselected by my little \r\n niece Twitty", font, clrText, new PointF(120.0f, 16.0f))
-
-(*        this.Draw_BangladeshFlag(30.0f, 10.0f, e.Graphics)
-
-    // Simple BD flag drawing function
-    member this.Draw_BangladeshFlag(x :float32, y :float32, g : System.Drawing.Graphics) =
-
-        // Draw the green background
-        g.FillRectangle(Brushes.Green, x, y, 82.0f, 56.0f)
-        // Draw the center red circle
-        g.FillEllipse(Brushes.Red, x + 20.0f, y + 10.0f, 34.0f, 34.0f)*)
-
 [<STAThread>]
 let START = 
 

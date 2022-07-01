@@ -9,6 +9,11 @@ let randomInt () =
   let rnd = new System.Random()
   rnd.Next(int System.Int16.MaxValue)
 
+let randomIntInRange(low, high) =
+  low + randomInt() % (high - low)
+
+printfn "random integer in range: %d" (randomIntInRange (10, 30) )
+
 let rec printRand count =
   if count > 0 then do
     printfn "%O" (randomInt())
@@ -109,10 +114,10 @@ type Suit =
 
 type Rectangle = { _base: double; height: double}
 
-(*type Shape =
-  | Rectangle of _base: double * _height: double    // `*` is a tuple!
-  | Triangle of _base: double * _height: double    // `*` is a tuple!
-  | Circle of radius: double*)
+//type Shape =
+//  | Rectangle of _base: double * _height: double    // `*` is a tuple!
+//  | Triangle of _base: double * _height: double    // `*` is a tuple!
+//  | Circle of radius: double
 
 type Shape =
   | Rectangle of Rectangle
@@ -151,10 +156,10 @@ let fizz' =
     | 15 -> "FizzBuzz"
     | _ -> "unknown"
 
-(*let fizz'' x = do
+let fizz'' x = do
   let str: string = ""
   if x % 3 = 0 then sprintf str "%s%s" str "Fizz"
-  if x % 5 = 0 then sprintf "%s%s" str str "Fizz"*)
+  if x % 5 = 0 then sprintf "%s%s" str str "Fizz"
 
 let buzz =
   function

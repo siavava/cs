@@ -156,10 +156,10 @@ let fizz' =
     | 15 -> "FizzBuzz"
     | _ -> "unknown"
 
-let fizz'' x = do
-  let str: string = ""
-  if x % 3 = 0 then sprintf str "%s%s" str "Fizz"
-  if x % 5 = 0 then sprintf "%s%s" str str "Fizz"
+// let fizz'' x = do
+//   let str: string = ""
+//   if x % 3 = 0 then sprintf str "%s%s" str "Fizz"
+//   if x % 5 = 0 then sprintf "%s%s" str str "Fizz"
 
 let buzz =
   function
@@ -240,7 +240,8 @@ let getFirstItem list = function
 let getFirstItem' list =
   List.head list
 
-let x: int list = List.head []
+let x: int list = List.head [ [2;3]; [4;5] ]
+printfn "list: %O" x
 
 let rec printEveryItem = function
   | x::xs ->
